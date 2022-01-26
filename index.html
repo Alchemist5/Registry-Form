@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Students Registry Form</title>
+</head>
+<body>
+    <header><h2>Alchemist University</h2></header>
+
+    <section class="form-wrapper">
+        <div class="form">
+
+            <div class="form-title">
+                <h4>Students' Registry Form</h4>
+            </div>
+
+            <form > 
+                <div class="name">
+                    <div class="firstname">
+                        <label for="">First Name</label>
+                        <input type="text" name="FirstName" id="first-name">
+                    </div>
+
+                    <div class="last-name">
+                        <label for="">Last Name</label>
+                        <input type="text" name="LastName" id="last-name">
+                    </div>
+                </div>
+
+                <div class="reg-no">
+                    <label for="">Registration Number</label>
+                    <input type="text" name="RegistrationNumber" id="reg-no">
+                </div>
+
+                <div class="course">
+                    <label>Course Name</label>
+                    <input type="text" name="course" id="course">
+                </div>
+
+                <div class="email">
+                    <label for="">Email</label>
+                    <input type="email" name="email" id="email">
+                </div>
+
+                <div class="id-no">
+                    <label for="">ID Number</label>
+                    <input type="number" name="IDNumber" id="id-no">
+                </div>
+
+                <button type="button" class="btn">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="students-database">
+
+        <div class="filter">
+            <input type="text" name="" id="filter" placeholder="Filter students by name">
+        </div>
+
+        <div class="database">
+            <table>
+                <thead>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Registration Number</th>
+                        <th>Course</th>
+                        <th>Email</th>
+                        <th>ID No.</th>
+                        <th></th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
+</body>
+</html>

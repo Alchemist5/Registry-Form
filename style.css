@@ -1,0 +1,249 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: #c4c4c4;
+}
+
+header {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+    padding: 20px;
+    color: #05056d;
+    animation: slideFromLeft 1.8s ease-in-out;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.form {
+    box-shadow: 1px 1px 5px 4px rgb(0 0 0 / 13%);
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #dadada;
+    animation: fadeIn 1.6s ease-in-out, rotate 1.4s ease-in-out;
+}
+
+.message {
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.success, .delete {
+    background-color: green;
+}
+
+.error {
+    background-color: red;
+}
+
+.form-title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #05056d;
+}
+
+.name {
+    display: flex;
+}
+
+.firstname {
+    margin-right: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 11px;
+    color: #05056d;
+}
+
+label::after {
+    content: '*';
+    color: red;
+}
+
+form > div {
+    margin-bottom: 15px;
+}
+
+input, .btn {
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    width: 100%;
+    transition: box-shadow .27s;
+}
+
+form > div input:focus {
+    box-shadow: 0px 0px 7px 6px rgb(49 73 210 / 30%)
+}
+
+.btn {
+    font-size: 18px;
+    background-color: royalblue;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.btn:hover {
+    transform: scale(.98);
+}
+
+.students-database {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    color: #05056d;
+}
+
+#filter {
+    margin-bottom: 40px;
+    background-color: #000;
+    color: #fff;
+    box-shadow: 1px 1px 6px 5px rgb(0 0 0 / 31%)
+} 
+
+#filter::placeholder {
+    color: #fff;
+}
+
+.database {
+    box-shadow: 1px 1px 5px 4px rgb(0 0 0 / 13%);
+    min-height: .01%;
+    overflow-x: auto;
+}
+
+table, th, td {
+    border: 2px solid #05056d;
+    border-spacing: 7px;
+}
+
+table {
+    border: none;
+    padding: 20px;
+}
+
+th,td {
+    padding: 5px;
+}
+
+tr {
+    cursor: pointer;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #828080;
+}
+
+th:last-child {
+    border: none;
+} 
+
+td:last-child {
+    background-color: red;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+}
+
+@keyframes slideFromLeft {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0px)
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateY(-135deg);
+    }
+
+    to {
+        transform: rotateY(0);
+    }
+}
+
+@media (max-width: 500px) {
+    header h2 {
+        font-size: 30px;
+    }
+
+    .form {
+        max-width: 300px;
+    }
+
+    .form-title h4 {
+        font-size: 22px;
+    }
+
+    .name {
+        flex-direction: column;
+    }
+
+    .firstname {
+        margin-bottom: 15px;
+    }
+
+    table, thead, tbody, th, td, tr {
+        display: block;
+    }
+
+    thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px
+    }
+
+    tbody tr {
+        margin-bottom: 20px;
+    }
+    
+    td {
+        position: relative;
+        padding-left: 50%;
+    }
+
+    td:before {
+        position: absolute;
+        top: 6px;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+    }
+
+    td:nth-of-type(1):before { content: "First Name"}
+    td:nth-of-type(2):before { content: "Last Name"}
+    td:nth-of-type(3):before { content: "Registration Number"}
+    td:nth-of-type(4):before { content: "Course"}
+    td:nth-of-type(5):before { content: "Email"}
+    td:nth-of-type(6):before { content: "ID No."}
+}
